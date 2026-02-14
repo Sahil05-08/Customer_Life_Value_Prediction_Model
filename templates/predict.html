@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Life Value Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="left-nav">
+    <a href="/" class="home-tab">🏠 Home</a>
+</div>
+
+<div class="main-card">
+
+<h1 class="title">🚚 Customer Life Value Prediction</h1>
+
+<form action="/predict" method="POST">
+
+
+<!-- OBJECT FIELDS -->
+<h2>🧍 Personal Details</h2>
+
+<label>🎂 Age</label>
+<input type="number" name="age" required min="7" max="80">
+
+<label>👤 Gender</label>
+<select name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+</select>
+
+<label>🌍 Country</label>
+<select name="country" required>
+    <option value="">Select Country</option>
+    <option>France</option>
+    <option>UK</option>
+    <option>Canada</option>
+    <option>USA</option>
+    <option>India</option>
+    <option>Japan</option>
+    <option>Germany</option>
+    <option>Australia</option>
+</select>
+
+<label>🏙 City</label>
+<select name="city" required>
+    <option value="">Select City</option>
+    <option>Marseille</option>
+    <option>Manchester</option>
+    <option>Vancouver</option>
+    <option>New York</option>
+    <option>Delhi</option>
+    <option>Tokyo</option>
+    <option>Berlin</option>
+    <option>Houston</option>
+    <option>Calgary</option>
+    <option>Glasgow</option>
+    <option>Munich</option>
+    <option>Phoenix</option>
+    <option>Paris</option>
+    <option>Ottawa</option>
+    <option>Los Angeles</option>
+    <option>Bangalore</option>
+    <option>Adelaide</option>
+    <option>Yokohama</option>
+    <option>Sydney</option>
+    <option>Nagoya</option>
+    <option>Frankfurt</option>
+    <option>Cologne</option>
+    <option>Hamburg</option>
+    <option>Nice</option>
+    <option>Chicago</option>
+    <option>Toulouse</option>
+    <option>Brisbane</option>
+    <option>Leeds</option>
+    <option>Mumbai</option>
+    <option>Montreal</option>
+    <option>Melbourne</option>
+    <option>Osaka</option>
+    <option>Lyon</option>
+    <option>Hyderabad</option>
+    <option>Chennai</option>
+    <option>Birmingham</option>
+    <option>London</option>
+    <option>Toronto</option>
+    <option>Perth</option>
+    <option>Kyoto</option>
+</select>
+
+<label>📅 Signup Quarter</label>
+<select name="signup_quarter" required>
+    <option value="">Select Quarter</option>
+    <option>Q1</option>
+    <option>Q2</option>
+    <option>Q3</option>
+    <option>Q4</option>
+</select>
+
+<h2>📈 Engagement & Activity</h2>
+
+<label>⏳ Membership Years</label>
+<input type="number" step="any" name="membership_years" required min="0">
+
+<label>🔐 Login Frequency</label>
+<input type="number" step="any" name="login_frequency" required min="0">
+
+<label>🕒 Avg Session Duration</label>
+<input type="number" step="any" name="session_duration_avg" required min="0">
+
+<label>📄 Pages Per Session</label>
+<input type="number" step="any" name="pages_per_session" required min="0">
+
+<label>🛒 Cart Abandonment Rate</label>
+<input type="number" step="any" name="cart_abandonment_rate" required min="0">
+
+<label>💝 Wishlist Items</label>
+<input type="number" step="any" name="wishlist_items" required min="0">
+
+<h2>💳 Transaction Details</h2>
+
+<label>🛍 Total Purchases</label>
+<input type="number" step="any" name="total_purchases" required min="0">
+
+<label>💰 Average Order Value</label>
+<input type="number" step="any" name="average_order_value" required min="0">
+
+<label>📆 Days Since Last Purchase</label>
+<input type="number" step="any" name="days_since_last_purchase" required min="0">
+
+<label>🏷 Discount Usage Rate</label>
+<input type="number" step="any" name="discount_usage_rate" required min="0">
+
+<label>↩ Returns Rate</label>
+<input type="number" step="any" name="returns_rate" required min="0">
+
+<label>📧 Email Open Rate</label>
+<input type="number" step="any" name="email_open_rate" required min="0">
+
+<label>📞 Customer Service Calls</label>
+<input type="number" step="any" name="customer_service_calls" required min="0">
+
+<label>⭐ Product Reviews Written</label>
+<input type="number" step="any" name="product_reviews_written" required min="0">
+
+<label>📱 Social Media Engagement Score</label>
+<input type="number" step="any" name="social_media_engagement_score" required min="0">
+
+<label>📲 Mobile App Usage</label>
+<input type="number" step="any" name="mobile_app_usage" required min="0">
+
+<label>💳 Payment Method Diversity</label>
+<input type="number" step="any" name="payment_method_diversity" required min="0">
+
+<label>🏦 Credit Balance</label>
+<input type="number" step="any" name="credit_balance" required min="0">
+
+<br><br>
+<button type="submit" class="btn">🔮 Predict CLV</button>
+
+</form>
+
+{% if prediction %}
+<div class="result-box">
+    💎 Predicted CLV: {{ prediction }}
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>

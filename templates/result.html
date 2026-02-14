@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-card">
+
+<h1 class="title"> 🚚 Prediction Result</h1>
+
+<div class="result-box">
+    {{ prediction }}
+</div>
+
+<br>
+<a href="/" class="btn">🔄 Predict Another Customer</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* ================= GLOBAL ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    background-size: 300% 300%;
+    animation: bgFlow 18s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Smooth background animation */
+@keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: white;
+    animation: fadeDown 0.8s ease;
+}
+
+.navbar h3 {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 22px;
+    background: linear-gradient(90deg, #00f5d4, #9b5de5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= MAIN CARD ================= */
+
+.main-card {
+    width: 95%;
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 55px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 
+        0 20px 60px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(255,255,255,0.05);
+    color: white;
+    animation: fadeUp 0.9s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= TITLE ================= */
+
+.title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #00f5d4, #9b5de5, #f15bb5);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleShine 6s linear infinite;
+}
+
+/* Soft gradient shine */
+@keyframes titleShine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #e0f7fa;
+    letter-spacing: 0.6px;
+}
+
+/* ================= FORM ================= */
+
+form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #cfd8dc;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 13px 15px;
+    margin-top: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+/* Smooth hover */
+form input:hover,
+form select:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* Focus effect */
+form input:focus,
+form select:focus {
+    outline: none;
+    border: 1px solid #00f5d4;
+    box-shadow: 0 0 10px rgba(0,245,212,0.4);
+    transform: scale(1.015);
+}
+
+/* Dropdown option */
+form select option {
+    background: #1b2a33;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    width: 100%;
+    margin-top: 35px;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #00f5d4, #9b5de5);
+    color: #0f2027;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,245,212,0.4);
+}
+
+/* ================= RESULT BOX ================= */
+
+.result-box {
+    margin-top: 40px;
+    padding: 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00f5d4, #9b5de5);
+    color: #0f2027;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 800;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    animation: smoothPop 0.5s ease;
+}
+
+@keyframes smoothPop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ================= SUBTLE GLOW BORDER ================= */
+
+.main-card {
+    position: relative;
+}
+
+.main-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    background: linear-gradient(120deg, #00f5d4, #9b5de5, #f15bb5);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.25;
+
+    pointer-events: none;   /* THIS FIXES CLICK ISSUE */
+}
+
+/* ================= LEFT HOME TAB ================= */
+
+.left-nav {
+    position: fixed;
+    top: 40px;
+    left: -120px;
+    animation: slideHome 0.7s forwards ease;
+    z-index: 1000;
+}
+
+/* Slide animation */
+@keyframes slideHome {
+    to {
+        left: 20px;
+    }
+}
+
+.home-tab {
+    display: block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: #0f2027;
+    background: linear-gradient(90deg, #00f5d4, #9b5de5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.home-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,245,212,0.4);
+}
