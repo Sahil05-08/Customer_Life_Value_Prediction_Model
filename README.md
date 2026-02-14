@@ -64,6 +64,7 @@ The goal of this project is to help businesses identify high-value customers and
 - Enables revenue forecasting and profitability analysis  
 
 ---
+
 ## 📂 Project Structure
 
 Customer_Life_Value_Prediction_Model/
@@ -74,9 +75,11 @@ Customer_Life_Value_Prediction_Model/
 ├── README.md
 │
 ├── templates/
-│ ├── home.html
-│ ├── predict.html
-│ └── result.html
+│   ├── home.html
+│   ├── predict.html
+│   └── result.html
 │
 ├── static/
-│ └── style.css
+│   └── style.css
+│
+└── High_value_customer.ipynb
