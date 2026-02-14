@@ -64,7 +64,6 @@ The goal of this project is to help businesses identify high-value customers and
 - Enables revenue forecasting and profitability analysis  
 
 ---
-
 ## 📂 Project Structure
 
 Customer_Life_Value_Prediction_Model/
