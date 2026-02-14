@@ -1,77 +1,72 @@
-📌 Customer Lifetime Value Prediction System
-🚀 Project Highlights
+# 🚀 Customer Lifetime Value Prediction System
 
-Built an end-to-end Machine Learning web application using Flask.
+## 📌 Overview
 
-Predicts whether a customer will be Premium, Profitable, or Non-Profitable.
+This project is an end-to-end Machine Learning web application designed to predict Customer Lifetime Value (CLV) and determine whether a customer is profitable for a business. The system analyzes demographic, behavioral, transactional, and engagement-related data to estimate long-term revenue potential.
 
-Implemented input validation (age limits, no negative values).
+The goal of this project is to help businesses identify high-value customers and support data-driven marketing and retention strategies.
 
-Applied business logic for actionable decision-making.
+---
 
-Structured project using clean folder architecture.
+## 🎯 Key Features
 
-Deployed model using joblib for real-time predictions.
+- Predicts customer profitability using a trained ML model  
+- Classifies customers as:
+  - 💎 Premium Customer  
+  - ✅ Profitable Customer  
+  - ❌ Non-Profitable Customer  
+- Real-time prediction through a Flask web interface  
+- Backend validation (age limits, no negative values)  
+- Clean and structured project architecture  
 
-🛠️ Technologies Used
+---
 
-🐍 Python
+## 🛠️ Technologies Used
 
-🌐 Flask (Web Framework)
+- **Python**
+- **Flask** (Web Framework)
+- **Pandas & NumPy** (Data Processing)
+- **Matplotlib & Seaborn** (Data Visualization)
+- **Scikit-learn** (Machine Learning)
+- **Linear Regression Model**
+- **Joblib** (Model Serialization)
+- **HTML & CSS** (Frontend)
 
-📊 Pandas & NumPy (Data Processing)
+---
 
-📈 Matplotlib & Seaborn (Data Visualization)
+## 🤖 Machine Learning Approach
 
-🤖 Scikit-learn (Machine Learning)
+- Performed data cleaning and preprocessing  
+- Conducted exploratory data analysis using visualization tools  
+- Selected relevant customer behavior and transaction features  
+- Trained a Linear Regression model to predict lifetime value  
+- Saved the trained model as a `.pkl` file for deployment  
+- Integrated the model into a Flask application for real-time predictions  
 
-📦 Joblib (Model Serialization)
+---
 
-💻 HTML & CSS (Frontend UI)
+## 🔄 Application Workflow
 
-🤖 Machine Learning Approach
+1. User enters customer details via web form  
+2. Backend validates inputs (age range and non-negative constraints)  
+3. Data is structured into a Pandas DataFrame  
+4. The trained ML model generates a prediction  
+5. Business logic categorizes the customer based on predicted value  
+6. Final result is displayed on a dedicated result page  
 
-Performed data cleaning and preprocessing.
+---
 
-Selected relevant behavioral and transactional features.
+## 📊 Business Impact
 
-Trained a Linear Regression model to predict Customer Lifetime Value.
+- Identifies high-value customers  
+- Supports targeted marketing decisions  
+- Helps improve customer retention strategies  
+- Enables revenue forecasting and profitability analysis  
 
-Evaluated model performance using regression metrics.
+---
 
-Saved the trained model as a .pkl file for deployment.
+## 📂 Project Structure
 
-🔄 Application Workflow (Pipeline)
-
-User enters customer details through web form.
-
-Backend validates inputs (age range, no negative values).
-
-Data is converted into a Pandas DataFrame.
-
-Pre-trained ML model predicts Customer Lifetime Value.
-
-Business logic classifies customer into:
-
-💎 Premium Customer
-
-✅ Profitable Customer
-
-❌ Non-Profitable Customer
-
-Result is displayed on a dedicated result page.
-
-📊 Business Impact
-
-Helps businesses identify high-value customers.
-
-Supports targeted marketing strategies.
-
-Assists in revenue forecasting.
-
-Improves customer retention decisions.
-
-📂 Project Structure
 Customer_Life_Value_Prediction_Model/
 │
 ├── app.py
@@ -80,9 +75,9 @@ Customer_Life_Value_Prediction_Model/
 ├── README.md
 │
 ├── templates/
-│   ├── home.html
-│   ├── predict.html
-│   └── result.html
+│ ├── home.html
+│ ├── predict.html
+│ └── result.html
 │
 ├── static/
-│   └── style.css
+│ └── style.css
