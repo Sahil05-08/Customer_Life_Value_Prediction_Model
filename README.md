@@ -67,6 +67,7 @@ The goal of this project is to help businesses identify high-value customers and
 
 ## 📂 Project Structure
 
+```
 Customer_Life_Value_Prediction_Model/
 │
 ├── app.py
@@ -83,3 +84,5 @@ Customer_Life_Value_Prediction_Model/
 │   └── style.css
 │
 └── High_value_customer.ipynb
+
+```
