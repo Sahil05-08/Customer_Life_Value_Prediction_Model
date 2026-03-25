@@ -86,3 +86,8 @@ Customer_Life_Value_Prediction_Model/
 └── High_value_customer.ipynb
 
 ```
+## Author
+
+**Sahil Suryawanshi**
+Computer Vision Engineer (Fresher) | Pune, Maharashtra
+[LinkedIn](http://www.linkedin.com/in/sahil585) · [GitHub](https://github.com/Sahil05-08)
